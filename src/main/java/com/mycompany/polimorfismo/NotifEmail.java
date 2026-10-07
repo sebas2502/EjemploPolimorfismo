@@ -19,5 +19,10 @@ public class NotifEmail extends Notificacion {
     @Override
      public void enviar(String mensaje){
          System.out.println("Email enviado al usuario "+destinatario+": "+mensaje);}   
+     
+     public void enviar(String mensaje , String archivoAdjunto){
+        System.out.println("Enviando Email a " + destinatario + ": " + mensaje);
+        System.out.println("Archivo adjunto incluido: " + archivoAdjunto);
+     }
     
 }
