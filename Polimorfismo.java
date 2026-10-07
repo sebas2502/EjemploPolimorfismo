@@ -4,22 +4,41 @@
 
 package com.mycompany.polimorfismo;
 
+
+
+
 /**
  *
  * @author sebac
  */
+
+ /* notif.enviar("Producto x con bajo stock");
+        notif.enviar("Producto x con bajo stock","reporte.pdf");
+        */
+
 public class Polimorfismo {
 
     public static void main(String[] args) {
         
-        Notificacion notifEmail = new NotifEmail("Juan");
-        Notificacion notifSms = new NotifSms("Juan");
-        Notificacion notifWhatsApp = new NotifWhatsApp("Juan");
+        Notificacion[] notificaciones = new Notificacion[3];
         
         
-        notifEmail.enviar("Producto x con bajo stock");
-        notifSms.enviar("Producto x con bajo stock");
-        notifWhatsApp.enviar("Producto x con bajo stock");
+        notificaciones[0] = new NotifEmail("juan@gmail.com");
+        notificaciones[1] = new NotifSms("3777-548574");
+        notificaciones[2] = new NotifWhatsApp("377-548574");
+        
+        NotifEmail notif = new NotifEmail("marcos@gmail.com");
+        
+        notif.enviar("stock bajo de varios productos","reporte.pdf");
+        
+        
+             
+         /* for (Notificacion n : notificaciones) {
+            n.enviar("Producto x con bajo stock");
+                
+          }*/    
+        
         
     }
+    
 }
